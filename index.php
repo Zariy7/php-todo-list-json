@@ -18,8 +18,11 @@
                             ToDo List
                         </h1>
                         <ul class="list-group">
-                            <li v-for='item, index in toDoList' :key="index" class="list-group-item">
-                                {{ item.task }}
+                            <li v-for='item, index in toDoList' :key="index" class="list-group-item d-flex justify-content-between">
+                                <div :class="item.status ? 'text-decoration-line-through' : ''">
+                                    {{ item.task }}
+                                </div>
+                                <button class="btn btn-success" @click="item.status = !item.status">&#10003;</button>
                             </li>
                         </ul>
                         <div class="my-3">

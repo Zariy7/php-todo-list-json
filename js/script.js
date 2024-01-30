@@ -22,6 +22,13 @@ createApp({
                 //console.log(response.data);
             })
         },
+        updateTask(listItem){
+            this.toDoList.forEach(elem => {
+                if(listItem.task == elem.task){
+                    elem.status = !elem.status;
+                }
+            });
+        },
         addListItem(){
             if(this.newListItem != ''){
                 objNewItem = {

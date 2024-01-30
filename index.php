@@ -22,7 +22,7 @@
                                 <div :class="item.status ? 'text-decoration-line-through' : ''">
                                     {{ item.task }}
                                 </div>
-                                <button class="btn btn-success" @click="item.status = !item.status">&#10003;</button>
+                                <button class="btn btn-success" @click="updateTask(item)">&#10003;</button>
                             </li>
                         </ul>
                         <div class="my-3">

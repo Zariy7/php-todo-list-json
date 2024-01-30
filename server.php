@@ -4,6 +4,9 @@
 
     if(isset($_POST['object'])){
         $list = $_POST['object'];
+        /* foreach($item as $list){
+            $item["status"] = parse($item["status"]);
+        } */
         file_put_contents('list.json', json_encode($list));
     }
 

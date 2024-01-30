@@ -21,6 +21,8 @@ createApp({
                 this.toDoList = response.data;
                 //console.log(response.data);
             })
+
+            //console.log(this.toDoList);
         },
         updateTask(listItem){
             this.toDoList.forEach(elem => {
@@ -41,6 +43,17 @@ createApp({
                 this.updateJson();
             }
             //console.log(this.toDoList);
+        },
+        removeListItem(listItem){
+            this.toDoList.forEach(elem => {
+                if(listItem.task == elem.task){
+                    let pos = this.toDoList.indexOf(elem);
+                    this.toDoList.splice(pos, 1);
+                }
+            });
+
+            console.log(this.toDoList);
+            this.updateJson();
         },
         getList(){
             axios.get('server.php').then((response) =>{

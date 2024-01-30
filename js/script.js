@@ -8,15 +8,13 @@ createApp({
         }
     },
     methods: {
-        updateJson(){
-            let data = {
-                "task": this.newListItem,
-                "status": false,
+        updateJson(data){
+            //console.log(data);
+            const item = {
+                object: data,
             }
 
-            //console.log(data);
-
-            axios.post('server.php', data, {
+            axios.post('server.php', item, {
                 headers: {'Content-type': 'multipart/form-data'}
             }).then((response) => {
                 this.newListItem = '';
@@ -31,10 +29,9 @@ createApp({
                     "status": false,
                 };
                 this.toDoList.push(objNewItem);
+                this.updateJson(objNewItem);
             }
-
-            console.log(this.toDoList);
-            this.updateJson();
+            //console.log(this.toDoList);
         },
         getList(){
             axios.get('server.php').then((response) =>{

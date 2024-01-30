@@ -19,7 +19,7 @@
                         </h1>
                         <ul class="list-group">
                             <li v-for='item, index in toDoList' :key="index" class="list-group-item">
-                                {{ item }}
+                                {{ item.task }}
                             </li>
                         </ul>
                         <div class="my-3">

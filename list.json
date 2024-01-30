@@ -1,0 +1,30 @@
+[
+    {
+        "task": "Walk the Dog",
+        "status": true
+    },
+    {
+        "task": "Wash the Car",
+        "status": false
+    },
+    {
+        "task": "Do the Laundry",
+        "status": true
+    },
+    {
+        "task": "Buy the Groceries",
+        "status": true
+    },
+    {
+        "task": "Clean the House",
+        "status": false
+    },
+    {
+        "task": "Water the Plants",
+        "status": false
+    },
+    {
+        "task": "Mow the Lawn",
+        "status": false
+    }
+]

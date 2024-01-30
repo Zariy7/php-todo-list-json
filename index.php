@@ -23,8 +23,8 @@
                                     {{ item.task }}
                                 </div>
                                 <div>
-                                    <button class="btn btn-success" @click="updateTask(item)">&#10003;</button>
-                                    <button class="btn btn-danger" @click="removeListItem(item)">&#x2717;</button>
+                                    <button class="btn btn-success" @click="item.status = !item.status, updateJson()">&#10003;</button>
+                                    <button class="btn btn-danger" @click="toDoList.splice(index, 1), updateJson()">&#x2717;</button>
                                 </div>
                             </li>
                         </ul>

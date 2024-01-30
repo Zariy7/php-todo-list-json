@@ -8,10 +8,10 @@ createApp({
         }
     },
     methods: {
-        updateJson(data){
+        updateJson(){
             //console.log(data);
             const item = {
-                object: data,
+                object: this.toDoList,
             }
 
             axios.post('server.php', item, {
@@ -28,6 +28,8 @@ createApp({
                     elem.status = !elem.status;
                 }
             });
+
+            this.updateJson();
         },
         addListItem(){
             if(this.newListItem != ''){
@@ -36,7 +38,7 @@ createApp({
                     "status": false,
                 };
                 this.toDoList.push(objNewItem);
-                this.updateJson(objNewItem);
+                this.updateJson();
             }
             //console.log(this.toDoList);
         },

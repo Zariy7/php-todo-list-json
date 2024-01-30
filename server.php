@@ -3,8 +3,7 @@
     $list = json_decode($toDolist, true);
 
     if(isset($_POST['object'])){
-        $item = $_POST['object'];
-        array_push($list, $item);
+        $list = $_POST['object'];
         file_put_contents('list.json', json_encode($list));
     }
 

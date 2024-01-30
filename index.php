@@ -19,11 +19,11 @@
                         </h1>
                         <ul class="list-group">
                             <li v-for='item, index in toDoList' :key="index" class="list-group-item d-flex justify-content-between">
-                                <div :class="item.status ? 'text-decoration-line-through' : ''">
+                                <div :class="item.status == 'true' ? 'text-decoration-line-through' : ''">
                                     {{ item.task }}
                                 </div>
                                 <div>
-                                    <button class="btn btn-success" @click="item.status = !item.status, updateJson()">&#10003;</button>
+                                    <button class="btn btn-success" @click="item.status == 'false' ? item.status = 'true' : item.status = 'false', updateJson()">&#10003;</button>
                                     <button class="btn btn-danger" @click="toDoList.splice(index, 1), updateJson()">&#x2717;</button>
                                 </div>
                             </li>

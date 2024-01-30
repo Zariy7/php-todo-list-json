@@ -1,1 +1,1 @@
-[{"task":"AAA","status":"false"},{"task":"GGG","status":"false"},{"task":"HHH","status":"false"},{"task":"EEE","status":"false"},{"task":"GGG","status":"false"},{"task":"HHH","status":"false"},{"task":"GGG","status":"false"}]
+[{"task":"AAA","status":"true"},{"task":"GGG","status":"true"},{"task":"HHH","status":"false"},{"task":"EEE","status":"false"},{"task":"GGG","status":"true"},{"task":"HHH","status":"true"},{"task":"GGG","status":"true"}]

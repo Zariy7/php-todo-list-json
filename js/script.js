@@ -10,6 +10,17 @@ createApp({
                 "DDD",
                 "EEE",
             ],
+            newListItem: '',
         }
-    }
+    },
+    methods: {
+        addListItem(){
+            if(this.newListItem != ''){
+                this.toDoList.push(this.newListItem);
+            }
+        }
+    },
+    created(){
+
+    },
 }).mount('#app');

@@ -22,6 +22,12 @@
                                 {{ item }}
                             </li>
                         </ul>
+                        <div class="my-3">
+                            <div class="input-group">
+                                <input name="addField" type="text" v-model="newListItem" class="form-control" placeholder="Add New Item" @keyup.enter="addListItem()">
+                                <button @click="addListItem()" class="btn btn-secondary">Add Item</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-2"></div>
                 </div>
